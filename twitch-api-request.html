@@ -30,7 +30,7 @@
         }).then(function (res) {
             console.log(res)
             console.log(res.streams[1].channel.name);
-            $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[1].channel.name)
+            $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[4].channel.name)
         }).catch(function (err) {
             console.log("error", err)
         });
