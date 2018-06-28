@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
 </head>
 
 <body>
-
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-    </ul>
-
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://api.twitch.tv/kraken/streams/gamesdonequick"></iframe>
+    <div id="twitch">
+        <iframe src="https://player.twitch.tv/?channel=" frameborder="0" allowfullscreen="true" scrolling="no" height="378"
+            width="620"></iframe>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script>
+        // client id: y5d67zepc6iut00ks7u7gukvfirtvy
+
+        //curl -H 'Client-ID: p0gch4mp101fy451do9uod1s1x9i4a' \
+        //-X GET 'https://api.twitch.tv/helix/streams?game_id=33214'
+
+        $.ajax({
+            headers: {
+                "Client-ID": "y5d67zepc6iut00ks7u7gukvfirtvy"
+            },
+            method: "GET",
+            url: "https://api.twitch.tv/kraken/streams?game=dota+2"
+        }).then(function (res) {
+            console.log(res)
+            console.log(res.streams[1].channel.name);
+            $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[1].channel.name)
+        }).catch(function (err) {
+            console.log("error", err)
+        });
+
+    </script>
 
 </body>
 
