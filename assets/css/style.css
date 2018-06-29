@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 body {
     background-image: url("https://i.ytimg.com/vi/X9ZzavtzWeg/maxresdefault.jpg");
     background-size: cover;
     width: 60%;
     margin: 0 auto;
+=======
+body{
+    background-image:url("https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/Gc75aRiB_U75cii694p_1D6FobE=/1200x0/filters:no_upscale()/https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/article/b8380a47-a76a-40f4-a8d0-d0180ea037f3.png");
+    background-size: cover;
+}
+.container {
+    background-color: silver;
+    position: relative;
+    padding-top:2%;
+}
+
+#nav {
+    
+>>>>>>> 64cae119795c61b25ead3e808001baa745c736b9
 }
