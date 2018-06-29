@@ -58,8 +58,4 @@ $(".link").on("click", function(){
     console.log($(this).attr("value"));
     $("iframe").attr("src","https://player.twitch.tv/?channel="+ $(this).attr("value"));
 
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> 96ca1dce6c2895556da30c029ae2fa6016c001e2
