@@ -9,8 +9,10 @@ $.ajax({
     console.log(res.streams[1].channel.name);
     for(i=0; i<10; i++){
        $("#"+i).attr("value", res.streams[i].channel.name);
+       $("#"+i).text(res.streams[i].channel.name);
     }
     $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[0].channel.name);
+
 }).catch(function (err) {
     console.log("error", err)
 });
@@ -22,6 +24,16 @@ $.ajax({
     method: "GET",
     url: "https://api.opendota.com/api/teams"
 }).then(function (res) {
+
+    for (var i = 0; i < 10; i++) {
+
+        var teamRow = $("<tr><td>" + (i + 1) + "</td><td>" + res[i].name + "</td><td>" + res[i].rating + "</td><td>" + res[i].wins +
+            "</td><td>" + res[i].losses + "</td></tr>")
+        $("#table-body").append(teamRow)
+
+        console.log(res[i].name);
+    }
+
     console.log(res);
     console.log(res["0"].banner)
 })
@@ -43,5 +55,7 @@ $.ajax({
 });
 
 $(".link").on("click", function(){
-    console.log(this.val());
+    console.log($(this).attr("value"));
+    $("iframe").attr("src","https://player.twitch.tv/?channel="+ $(this).attr("value"));
+
 })
