@@ -7,7 +7,10 @@ $.ajax({
 }).then(function (res) {
     console.log(res)
     console.log(res.streams[1].channel.name);
-    $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[0].channel.name)
+    for(i=0; i<10; i++){
+       $("#"+i).attr("value", res.streams[i].channel.name);
+    }
+    $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[0].channel.name);
 }).catch(function (err) {
     console.log("error", err)
 });
@@ -37,5 +40,8 @@ $.ajax({
 }).then(function (response) {
     console.log(response);
     console.log(response.data.appnews.newsitems[1].contents);
-    
 });
+
+$(".link").on("click", function(){
+    console.log(this.val());
+})
