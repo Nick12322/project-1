@@ -8,6 +8,14 @@ $.ajax({
     console.log(res)
     console.log(res.streams[1].channel.name);
     $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[0].channel.name)
+    for (var i = 0; i<=9; i++){
+        $("#stream"+i).attr("value", res.streams[i].channel.name);
+    }
+    
+    $(".list-group-item list-group-item-action list-group-item-dark").on("click", function(){
+        $("iframe").attr('')
+    })
+
 }).catch(function (err) {
     console.log("error", err)
 });
