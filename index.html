@@ -5,37 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous" <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <div id="twitch">
-        <iframe src="https://player.twitch.tv/?channel=" frameborder="0" allowfullscreen="true" scrolling="no" height="378"
-            width="620"></iframe>
+        <iframe src="https://player.twitch.tv/?channel=" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
     </div>
+
+
+    <div class="card">
+        <table class="table" id="team-info">
+            <thead>
+                <tr>
+                    <th scope="col">Ranking #</th>
+                    <th scope="col">Team Name</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Wins</th>
+                    <th scope="col">Losses</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script>
-        // client id: y5d67zepc6iut00ks7u7gukvfirtvy
-
-        //curl -H 'Client-ID: p0gch4mp101fy451do9uod1s1x9i4a' \
-        //-X GET 'https://api.twitch.tv/helix/streams?game_id=33214'
-
-        $.ajax({
-            headers: {
-                "Client-ID": "y5d67zepc6iut00ks7u7gukvfirtvy"
-            },
-            method: "GET",
-            url: "https://api.twitch.tv/kraken/streams?game=dota+2"
-        }).then(function (res) {
-            console.log(res)
-            console.log(res.streams[1].channel.name);
-            $("iframe").attr("src","https://player.twitch.tv/?channel="+ res.streams[1].channel.name)
-        }).catch(function (err) {
-            console.log("error", err)
-        });
-
-    </script>
+    <script src="assets/javascript/app.js"></script>
 
 </body>
 
