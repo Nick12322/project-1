@@ -5,9 +5,11 @@ body{
 .container {
     background-color: silver;
     position: relative;
-    padding-top:2%;
+    padding-top: 2%;
+    margin-top: 50px;
 }
 
 #nav {
-    
+
 }
+
