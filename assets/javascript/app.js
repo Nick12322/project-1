@@ -41,7 +41,7 @@ $.ajax({
 var apiURL = 'https://proxy-cbc.herokuapp.com/proxy';
 
 //the url for google places
-var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=100&maxlength=300&format=json'
+var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=5&maxlength=300&format=json'
 
 $.ajax({
     url: apiURL,
@@ -52,6 +52,19 @@ $.ajax({
 }).then(function (response) {
     console.log(response);
     console.log(response.data.appnews.newsitems[1].contents);
+    for (var i = 0; i < response.data.appnews.newsitems.length; i++) {
+
+        var feedCounter = 0;
+ 
+        if (response.data.appnews.newsitems[i].feed_type === 0 && feedCounter <= 5) {
+            console.log(response.data.appnews.newsitems[i]);
+            feedCounter++;
+            $("#auth"+i).text(response.data.appnews.newsitems[i].title);
+        };
+        
+
+    };
+    
 });
 
 $(".link").on("click", function(){
