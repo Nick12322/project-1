@@ -3,11 +3,17 @@ body{
     background-size: cover;
 }
 .container {
-    background-color: silver;
+    background-color: #4c4f4f;
     position: relative;
     padding-top:2%;
 }
 
-#nav {
-    
+.streamers {
+    background-color: #212529;
+    color: white;
 }
+
+.streamers-header {
+    font-weight: bold;
+}
+
