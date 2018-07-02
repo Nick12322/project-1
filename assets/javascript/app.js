@@ -58,13 +58,12 @@ $.ajax({
         var feedCounter = 0;
 
         if (response.data.appnews.newsitems[i].feed_type === 0 && feedCounter <= 5) {
-            console.log(response.data.appnews.newsitems[i]);
             feedCounter++;
             $("#auth" + i).text(response.data.appnews.newsitems[i].title);
+            $("#auth" + i).attr("href", response.data.appnews.newsitems[i].url)
         };
 
-
-    };
+    }   
 
 });
 
