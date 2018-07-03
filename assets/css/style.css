@@ -20,3 +20,17 @@ body{
 a {
     color: #212529;
 }
+
+.navbar {
+    background-color: #212529 !important;
+}
+
+.streamers-header {
+    background-color: #a6a6a6;
+    text-align: center;
+    color: #212529 !important;
+}
+
+#moveThis {
+    margin-left: 12px;
+}
