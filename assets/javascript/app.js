@@ -41,7 +41,7 @@ $.ajax({
 var apiURL = 'https://proxy-cbc.herokuapp.com/proxy';
 
 //the url for google places
-var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=5&maxlength=300&format=json'
+var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=6&maxlength=300&format=json'
 
 $.ajax({
     url: apiURL,
@@ -51,19 +51,19 @@ $.ajax({
     }
 }).then(function (response) {
     console.log(response);
-    console.log(response.data.appnews.newsitems[1].contents);
     for (var i = 0; i < response.data.appnews.newsitems.length; i++) {
-        
+
 
         var feedCounter = 0;
 
-        if (response.data.appnews.newsitems[i].feed_type === 0 && feedCounter <= 5) {
+        if (response.data.appnews.newsitems[i].feed_type === 0 && feedCounter <= 6) {
             feedCounter++;
             $("#auth" + i).text(response.data.appnews.newsitems[i].title);
             $("#auth" + i).attr("href", response.data.appnews.newsitems[i].url)
+            $(".img-link" + i).attr("href", response.data.appnews.newsitems[i].url);
         };
 
-    }   
+    }
 
 });
 
@@ -87,7 +87,7 @@ function getRandomImage(imgAr, path) {
 getRandomImage(imagesArray, 'assets/images');
 
 function Shuffle(o) {
-    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
 
