@@ -1,5 +1,5 @@
 body{
-    background-image:url("https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/Gc75aRiB_U75cii694p_1D6FobE=/1200x0/filters:no_upscale()/https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/article/b8380a47-a76a-40f4-a8d0-d0180ea037f3.png");
+    background:url("https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/Gc75aRiB_U75cii694p_1D6FobE=/1200x0/filters:no_upscale()/https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/article/b8380a47-a76a-40f4-a8d0-d0180ea037f3.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -38,9 +38,12 @@ a {
 }
 
 #signup-header {
-    background-color: white; 
+    background-color: #212529;
+    font-weight: bold;
+    color: white;
     width: 50%; 
     margin: 75px auto 0 auto;
+    padding: 5px;
     border-radius: 5px;
 }
 
@@ -51,7 +54,7 @@ a {
 
 #container-1 {
     width: 45%;
-    background: black;
+    background: white;
     float: left;
     margin-right: 10px;
 }
@@ -67,4 +70,5 @@ a {
 
 #users-table {
     margin: 5px;
+    width: 100%;
 }

@@ -11,43 +11,33 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// Part of form validation
+// Form validation / event listener
 $.validator.setDefaults({
     submitHandler: function () {
-        alert("submitted!");
-    }
-});
-
-// Part of form validation
-$(document).ready(function () {
-    $("#email-input-form").validate();
-});
-
-// Main form validation function: pushes new user data to firebase after form has been validated
-$("#email-input-form").validate({
-    submitHandler: function (form) {
-        $(form).on("submit", function (e) {
-            // e.preventDefault();
-            alert("submitted");
-            // Store user input
-            var email = $("#email-input").val();
-            var userID = $("#id-input").val();
-            $("#email-input").val(""); // clear input field
-            $("#id-input").val(""); // clear input field
-            console.log(email);
-            console.log(userID);
-            database.ref().push({
-                email: email,
-                userID: userID
-            });
+        var email = $("#email-input").val();
+        var userID = $("#id-input").val();
+        $("#email-input").val(""); // clear input field
+        $("#id-input").val(""); // clear input field
+        console.log(email);
+        console.log(userID);
+        database.ref().push({
+            email: email,
+            userID: userID,
+            signUpDate: firebase.database.ServerValue.TIMESTAMP // Timestamp of submission to firebase = date user signed up
         });
     }
 });
 
+// Validate email input form
+$("#email-input-form").validate();
+
 // Every time a user is added to database, execute the following function with snapshot parameter passed (snap)
 database.ref().on("child_added", function (snap) {
     var userID = snap.val().userID;
+    var signUpDate = snap.val().signUpDate;
+    // convertedDate holds converted sign up date from unix time
+    var convertedDate = moment(signUpDate).format('MMMM D YYYY');
     // Create new row with user data and append to users-table body
-    var newUser = $("<tr><td>" + userID + "</td></tr>");
+    var newUser = $("<tr><td>" + userID + "</td><td>" + convertedDate + "</td></tr>");
     $("#users-body").append(newUser);
 });
