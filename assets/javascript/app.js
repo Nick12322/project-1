@@ -41,7 +41,7 @@ $.ajax({
 var apiURL = 'https://proxy-cbc.herokuapp.com/proxy';
 
 //the url for google places
-var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=6&maxlength=300&format=json'
+var queryURL = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=570&count=7&maxlength=300&format=json'
 
 $.ajax({
     url: apiURL,

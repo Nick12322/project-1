@@ -20,7 +20,7 @@ body{
 }
 
 a {
-    color: #212529;
+    color: white;
 }
 
 .navbar {
@@ -77,4 +77,9 @@ select.error, textarea.error, input.error {
 #email-input-error {
     margin-left: 5px;
     color: rgb(185, 0, 0);
+}
+
+#linksToWebsites a:hover{
+    text-decoration: none;
+    color: #212529;
 }
