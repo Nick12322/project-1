@@ -71,10 +71,10 @@ a {
 }
 
 select.error, textarea.error, input.error {
-    color: rgb(190, 0, 0);
+    color: rgb(185, 0, 0);
 }
 
 #email-input-error {
     margin-left: 5px;
-    color: rgb(190, 0, 0);
+    color: rgb(185, 0, 0);
 }
