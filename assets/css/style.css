@@ -33,10 +33,6 @@ a {
     color: #212529 !important;
 }
 
-#moveThis {
-    margin-left: 12px;
-}
-
 #signup-header {
     background-color: #212529;
     font-weight: bold;
@@ -75,10 +71,10 @@ a {
 }
 
 select.error, textarea.error, input.error {
-    color: rgb(190, 0, 0);
+    color: rgb(185, 0, 0);
 }
 
 #email-input-error {
     margin-left: 5px;
-    color: rgb(190, 0, 0);
+    color: rgb(185, 0, 0);
 }
