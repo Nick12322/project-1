@@ -79,7 +79,7 @@ select.error, textarea.error, input.error {
     color: rgb(185, 0, 0);
 }
 
-#linksToWebsites a:hover{
+.articlesContainer a:hover{
     text-decoration: none;
     color: #212529;
 }
