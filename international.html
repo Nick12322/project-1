@@ -6,53 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The International</title>
+    <link rel="stylesheet" type"text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
 
-    <style>
-        /* Style the video: 100% width and height to cover the entire window */
-
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-
-        /* Add some content at the bottom of the video/page */
-
-        .content {
-            position: fixed;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Style the button used to pause/play the video */
-
-        #myBtn {
-            width: 200px;
-            font-size: 18px;
-            padding: 10px;
-            border: none;
-            background: #000;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        #myBtn:hover {
-            background: #ddd;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" type"text/css" href="assets/css/international.css">
 </head>
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.html">
             <img src="assets/images/esports-icon-white-b8b9fb27.png" width="30" height="30" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -73,7 +36,7 @@
                     <a class="nav-link" href="signup.html">Sign up!</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="test.html">The International</a>
+                    <a class="nav-link" href="international.html">The International</a>
                 </li>
             </ul>
         </div>
@@ -83,24 +46,7 @@
 
     <!-- The video -->
     <iframe id="myVideo" width="100%" height="100%" src="https://www.youtube.com/embed/oWBDZo3axYg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <script>
-        // Get the video
-        var video = document.getElementById("myVideo");
-
-        // Get the button
-        var btn = document.getElementById("myBtn");
-
-        // Pause and play the video, and change the button text
-        function myFunction() {
-            if (video.paused) {
-                video.play();
-                btn.innerHTML = "Pause";
-            } else {
-                video.pause();
-                btn.innerHTML = "Play";
-            }
-        }
-    </script>
+  <script src="assets/javascript/international.js"></script>  
 </body>
 
 </html>

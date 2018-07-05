@@ -51,6 +51,7 @@ $.ajax({
     }
 }).then(function (response) {
     console.log(response);
+    var steamNews = []
     for (var i = 0; i < response.data.appnews.newsitems.length; i++) {
 
 
@@ -58,12 +59,14 @@ $.ajax({
 
         if (response.data.appnews.newsitems[i].feed_type === 0 && feedCounter <= 6) {
             feedCounter++;
-            $("#auth" + i).text(response.data.appnews.newsitems[i].title);
-            $("#auth" + i).attr("href", response.data.appnews.newsitems[i].url)
-            $(".img-link" + i).attr("href", response.data.appnews.newsitems[i].url);
+            steamNews.push(response.data.appnews.newsitems[i])
         };
 
     }
+    for (var j = 0; j< steamNews.length; j++)
+        {$("#auth" + j).text(steamNews[j].title);
+        $("#auth" + j).attr("href", steamNews[j].url);
+        $(".img-link" + j).attr("href", steamNews[j].url);}
 
 });
 
