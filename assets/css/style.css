@@ -79,7 +79,15 @@ select.error, textarea.error, input.error {
     color: rgb(185, 0, 0);
 }
 
-.articlesContainer a:hover{
+#steamNewsArticles {
+    padding-bottom:30px;
+}
+
+#steamNewsArticles a:hover {
     text-decoration: none;
     color: #212529;
+}
+
+h1 {
+    color: white;
 }
