@@ -79,6 +79,24 @@ select.error, textarea.error, input.error {
     color: rgb(185, 0, 0);
 }
 
+.modal-header {
+    background: #212529;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-body {
+    background: #212529;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-footer {
+    background: #212529;
+    color: white;
+    font-weight: bold;
+}
+
 .articlesContainer a:hover{
     text-decoration: none;
     color: #212529;
