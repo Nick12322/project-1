@@ -76,7 +76,7 @@ $(".link").on("click", function () {
 
 })
 
-var imagesArray = ["https://www.pcgamesn.com/sites/default/files/Dota%202%20logo.jpg", "https://image.redbull.com/rbcom/010/2017-03-24/1331850779523_2/0100/0/1/test-your-dota-2-knowledge.jpg", "https://cdn.vox-cdn.com/thumbor/QYlahziT-bFJ4fPoQXzbe_dwJUY=/0x0:1800x1200/1280x854/cdn.vox-cdn.com/uploads/chorus_image/image/40388834/yurnero-dota-2.0.0.jpg", 'http://cdn1-www.gamerevolution.com/assets/uploads/2018/02/dota-2-screenshot.jpg', 'https://cdn.vox-cdn.com/thumbor/Ywn2-0w2b2h797Kyvoi16tGg2-8=/0x0:1107x589/1200x800/filters:focal(270x289:446x465)/cdn.vox-cdn.com/uploads/chorus_image/image/59530203/Screen_Shot_2018_04_26_at_11.28.47_AM.0.png', 'https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/av2tftvpRB6SOHuMT_CSEZM94T0=/1200x0/filters:no_upscale()/https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/article/ba87965c-382e-403d-b764-98f9baae54ac.png']
+var imagesArray = ['assets/images/Bloodseeker_poster.0.jpg', 'assets/images/dota-2-grimstroke.jpg', 'assets/images/dota-2-update-7-0-changes.jpg.optimal.jpg', 'assets/images/test-your-dota-2-knowledge.jpg', 'assets/images/ursa.jpg', 'assets/images/ember.png']
 function getRandomImage(imgAr, path) {
     Shuffle(imgAr);
     for (var i = 0; i <= imgAr.length; i++) {
