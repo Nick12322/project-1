@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/signup.css">
 </head>
 
 <body>
@@ -44,33 +44,40 @@
         <h3 class="text-center" id="signup-header">
             Sign up to receive our newsletter and be an elite member of our site!
         </h3>
-        <div class="card" id="container-1">
-            <form name="email-input-form" id="email-input-form">
-                <input type="email" id="email-input" name="email-input" placeholder="Enter your email" required>
-                <input type="text" id="id-input" name="id-input" placeholder="Enter your user ID" minlength="2"
-                    required>
-                <br>
-                <button type="submit" id="submit-btn" style="margin-top: 5px;">Submit</button>
-            </form>
-        </div>
+        <div class="row">
+            <div class="col-md-4 text-center" id="container-1">
+                <form name="email-input-form" id="email-input-form">
+                    <div class="form-group">
+                        <label for="email-input">Email</label>
+                        <input type="email" class="form-control" id="email-input" name="email-input" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id-input">ID</label>
+                        <input type="text" class="form-control" id="id-input" name="id-input" placeholder="Enter your user ID" minlength="2"
+                            required>
+                        <button type="submit" id="submit-btn" class="btn btn-dark">Submit</button>
+                    </div>
+                </form>
+            </div>
 
-        <div class="card" id="container-2">
-            <h4 class="text-center">
-                <span style="font-weight: bold">Elite Members</span>
-            </h4>
-            <table id="users-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Steam User ID</th>
-                        <th scope="col">Member Since</th>
-                    </tr>
-                </thead>
-                <tbody id="users-body">
+            <div class="col-md-8" id="container-2">
+                <h4 class="text-center">
+                    <span style="font-weight: bold">Elite Members</span>
+                </h4>
+                <table class="table table-dark" id="users-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Steam User ID</th>
+                            <th scope="col">Member Since</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-body">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+        
 
     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
