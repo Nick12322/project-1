@@ -109,3 +109,15 @@ select.error, textarea.error, input.error {
 h1 {
     color: white;
 }
+
+#twitchVideo {
+    height: 489px; 
+    width: 100%;
+}
+
+@media only screen and (max-width: 783px) {
+    #twitchVideo {
+        padding-top: 20px;
+    }
+  }
+
