@@ -31,3 +31,11 @@
     height: 489px; 
     width: 636px;
 }
+
+@media only screen and (max-width: 800px){
+    #table {
+        table-layout: fixed;
+        font-size: 12px;
+        word-break: break-all;
+    }
+}
