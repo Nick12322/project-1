@@ -7,6 +7,7 @@
 body {
     background:url("../images/dota-2-picture_112431763_222.jpg") no-repeat center center fixed;
     background-size: cover;
+    overflow: scroll;
 }
 
 #container-1 {
