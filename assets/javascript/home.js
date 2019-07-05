@@ -7,6 +7,7 @@ $.ajax({
     url: "https://api.opendota.com/api/proMatches"
 }).then(function (res) {
 
+
     let radiantTeams = [];
     let direTeams = [];
     let leagueNames = [];
